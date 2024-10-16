@@ -1,0 +1,384 @@
+@font-face {
+  font-family: "Montserrat-Light";
+  src: url("fonts/Montserrat-Light.ttf") format("truetype");
+  font-weight: 130;
+}
+
+@font-face {
+  font-family: "DaysOne-Regular";
+  src: url("fonts/DaysOne-Regular.ttf") format("truetype");
+  font-weight: 130;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url(img/423213525342345.png);
+  background-size: cover;
+  font-family: "Montserrat-Light", serif;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 12vh;
+  color: #fff;
+  position: relative; /* Для абсолютного позиционирования логотипа */
+}
+
+.logo {
+  position: absolute; /* Абсолютное позиционирование */
+  top: 20px; /* Фиксированный отступ сверху */
+  left: 10%; /* Фиксированный отступ слева */
+  z-index: 1000; /* Поверх навигационного меню */
+}
+
+.logo img {
+  width: 50px; /* Размер логотипа */
+  margin-top: 5%;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  transition: transform 0.5s ease;
+}
+
+nav ul li:hover {
+  transform: scale(1.2);
+}
+
+nav ul li {
+  margin: 0 20px;
+  font-size: 22px;
+  transition: transform 0.5s ease;
+}
+
+nav ul li a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.burger-menu {
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+.burger-menu div {
+  width: 100%;
+  height: 4px;
+  background-color: #ffffff;
+  transition: all 0.3s ease;
+}
+
+.mobile-nav {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 200px;
+  background: rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  padding: 20px;
+  box-shadow: -5px 0 10px rgba(0, 0, 0, 0.5);
+  transform: translateX(100%);
+  transition: transform 0.3s ease;
+  z-index: 999;
+}
+
+.mobile-nav li a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.mobile-nav.open {
+  transform: translateX(0);
+}
+
+.mobile-nav ul {
+  display: flex;
+  flex-direction: column;
+  margin-top: 65%;
+}
+
+.mobile-nav ul li {
+  margin-bottom: 20px;
+  transition: transform 0.5s ease;
+}
+
+.mobile-nav ul li:hover {
+  transform: translateX(10px);
+}
+
+.burger-menu.open div:nth-child(1) {
+  transform: rotate(45deg) translate(9px, 9px);
+}
+
+.burger-menu.open div:nth-child(2) {
+  opacity: 0;
+}
+
+.burger-menu.open div:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+@media (max-width: 768px) {
+  nav ul {
+    display: none;
+  }
+
+  .burger-menu {
+    display: flex;
+  }
+}
+
+.heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10%;
+}
+
+
+
+
+.heading img {
+  width: 60%;
+  height: auto;
+}
+
+hr {
+  width: 80%;
+  margin-top: 10%;
+}
+
+main {
+  color: #ffffff;
+  margin-left: 10%;
+  margin-top: 15%;
+}
+
+main h1 {
+  font-family: "DaysOne-Regular", serif;
+  font-size: 32px;
+  font-weight: 120;
+}
+
+main article {
+  font-size: 26px;
+  font-family: "Montserrat-Light", serif;
+  line-height: 1.5;
+}
+
+.contacts, .foto {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3%;
+  gap: 20px;
+  
+}
+
+.contacts img {
+ transition: transform 0.3s ease; 
+}
+
+.contacts img:hover {
+  transform: scale(1.4);
+}
+
+
+.foto img {
+  box-shadow: 0 16px 114px rgba(224, 224, 224, 0.79);
+  border-radius: 40px;
+  transition: transform 0.3s ease; 
+}
+
+.foto img:hover {
+  transform: scale(1.01);
+}
+
+.wm {
+  text-align: center;
+}
+
+
+
+
+
+/* Медиазапрос для 4K экранов */
+@media (min-width: 2560px) {
+  body {
+    font-size: 22px;
+  }
+
+  .logo img {
+    width: 150px; /* Увеличенный размер логотипа */
+  }
+
+  nav ul li {
+    font-size: 26px; /* Увеличенный размер текста в навигации */
+  }
+
+  .heading img {
+    width: 70%; /* Увеличенный размер изображения заголовка */
+  }
+}
+
+/* Медиазапрос для 2K экранов */
+@media (min-width: 1920px) and (max-width: 2560px) {
+  body {
+    font-size: 20px;
+  }
+
+  .logo img {
+    width: 100px;
+  }
+
+  nav ul li {
+    font-size: 32px;
+  }
+
+  .heading img {
+    width: 60%;
+  }
+
+  main {
+    margin-top: 5%;
+  }
+  main h1 {
+    font-size: 45px;
+  }
+  main article {
+    font-size: 32px;
+  }
+  .contacts img {
+    width: 80px;
+    height: auto;
+  }
+  .foto {
+    gap: 100px;
+  }
+  .foto img {
+    border-radius: 40px;
+    width: 800px;
+  }
+}
+
+/* Медиазапрос для ноутбуков (1440px и меньше) */
+@media (max-width: 1440px) {
+  body {
+    font-size: 18px;
+  }
+
+  .logo img {
+    width: 80px;
+  }
+
+  nav ul li {
+    font-size: 22px;
+  }
+
+  .heading img {
+    width: 50%;
+  }
+}
+
+/* Медиазапрос для планшетов (768px и меньше) */
+@media (max-width: 768px) {
+  body {
+    font-size: 16px;
+  }
+
+  .logo img {
+    width: 60px;
+  }
+
+  nav ul {
+    display: none; /* Прячем десктопное меню */
+  }
+
+  .burger-menu {
+    display: flex; /* Показываем бургер-меню */
+  }
+
+  .heading img {
+    width: 70%;
+  }
+
+  main h1 {
+    font-size: 24px;
+  }
+
+  main article {
+    font-size: 20px;
+  }
+
+  .foto img {
+    width: 40%;
+    border-radius: 20px;
+  }
+}
+
+/* Медиазапрос для смартфонов (480px и меньше) */
+@media (max-width: 480px) {
+  body {
+    font-size: 14px;
+  }
+
+  .logo img {
+    width: 40px;
+  }
+
+  .heading img {
+    width: 90%;
+  }
+
+  main h1 {
+    font-size: 20px;
+  }
+
+  main article {
+    font-size: 18px;
+  }
+
+  .foto img {
+    width: 70%;
+    border-radius: 20px ;
+  }
+  .foto {
+    flex-direction: column;
+  }
+}
+
+.wm {
+  color: #fff;
+  margin-top: 3%;
+  text-decoration: none;
+}
+
+.wm a {
+  text-decoration: none;
+  color: #fff;
+}

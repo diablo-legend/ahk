@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+   <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AHK | Все для вашего удовольствия!</title>
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <a href="#">
+          <img src="img/logo.png" alt="Логотип">
+        </a>
+      </div>
+      
+      <nav>
+        <ul>
+          <li><a href="https://ahk.easydonate.ru/#shop" target="_blank">Магазин</a></li>
+          <li><a href="https://discord.gg/MZegJrQq5v" target="_blank">Правила</a></li>
+          <li><a href="https://discord.gg/MZegJrQq5v" target="_blank">Дискорд</a></li>
+        </ul>
+      </nav>
+
+      <div class="burger-menu" id="burgerMenu">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+
+      <div class="mobile-nav" id="mobileNav">
+        <ul>
+          <li><a href="https://ahk.easydonate.ru/#shop" target="_blank">Магазин</a></li>
+          <li><a href="https://discord.gg/MZegJrQq5v" target="_blank">Правила</a></li>
+          <li><a href="https://discord.gg/MZegJrQq5v" target="_blank">Дискорд</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <script>
+      const burger = document.querySelector(".burger-menu");
+      const mobileNav = document.querySelector(".mobile-nav");
+
+      burger.addEventListener("click", () => {
+        burger.classList.toggle("open");
+        mobileNav.classList.toggle("open");
+      });
+
+      // Обработчик события на изменение размера экрана
+      window.addEventListener("resize", () => {
+        if (window.innerWidth > 768) {
+          burger.classList.remove("open");
+          mobileNav.classList.remove("open");
+        }
+      });
+    </script>
+
+    <div class="heading">
+      <img src="img/heading.svg" alt="Заголовок ahk">
+    </div>
+    <hr>
+
+    <main>
+      <section class="news">
+        <h1>Последние новости:</h1>
+        <br>
+        <br>
+        <article>— Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты.<br>Переписали, рекламных.</article>
+        <br>
+        <article>— Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты.<br>Переписали, рекламных.</article>
+      </section>
+
+      <br>
+      <br>
+      <br>
+      <br>
+
+      <section class="briefing">
+        <article class="briefing">
+          <h1>Как начать играть?</h1>
+          <br>
+          <details>
+            <summary>Заголовок</summary>
+            <p>Раскрывающийся контент</p>
+          </details>
+          <details>
+            <summary>Заголовок</summary>
+            <p>Раскрывающийся контент</p>
+          </details>
+          <details>
+            <summary>Заголовок</summary>
+            <p>Раскрывающийся контент</p>
+          </details>
+        </article>
+      </section>
+
+    </main>
+
+    <section class="contacts">
+      <article>
+        <div class="contacts">
+          <a href="https://discord.gg/MZegJrQq5v" target="_blank"><img src="img/Discord.svg" alt="Дискорд"></a>
+          <a href="https://www.youtube.com/@Clyde_YT_" target="_blank"><img src="img/YouTube.svg" alt="YouTube"></a>
+          <a href="https://t.me/ahk_vanila" target="_blank"><img src="img/Telegram App.svg" alt="Телеграм"></a>
+        </div>
+      </article>
+    </section>
+
+    <section class="foto">
+      <article>
+        <div class="foto">
+          <img src="img/1.jpg" alt="Фото">
+          <img src="img/2.jpg" alt="Фото">
+      </article>
+    </section>
+    <article>
+      <div class="foto">
+        <img src="img/3.jpg" alt="Фото">
+        <img src="img/4 (2).jpg" alt="Фото">
+    </article>
+  </section>
+  <br>
+  <br>
+     <div class="wm">
+      <p>AHK | <a href="https://t.me/diablo_legend">by diablo</a></p>
+    </div>
+<br>
+<br>
+    <script src="script.js"></script>
+  </body>
+</html>
